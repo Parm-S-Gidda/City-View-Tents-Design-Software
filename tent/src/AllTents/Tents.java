@@ -2,14 +2,14 @@ package AllTents;
 
 public class Tents {
 
-    int xLeft;
-    int yTop;
-    int width;
-    int xCentre;
-    int yCentre;
-    int height;
-    int xRight;
-    int yBottom;
+   public int xLeft;
+    public int yTop;
+    public int width;
+    public int xCentre;
+    public int yCentre;
+    public int height;
+    public  int xRight;
+    public int yBottom;
 
 
 

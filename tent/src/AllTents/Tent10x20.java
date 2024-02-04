@@ -24,18 +24,15 @@ public class Tent10x20  extends Tents{
 
         width = 24;
         height = 48;
-    }
-
-    public void setDefaultValues(){
-
         xLeft = 0;
         yTop = 0;
-
-        xRight = 0;
-        yBottom = 0;
-
-
+        xRight = xLeft + width;
+        yBottom = xLeft + height;
+        xCentre = xLeft + (width / 2);
+        yCentre = yBottom + (height /2);
     }
+
+
 
     public void update(){
 
@@ -88,8 +85,8 @@ public class Tent10x20  extends Tents{
                 xLeft = xCentre - width / 2;
                 xRight = xCentre + width / 2;
 
-                yTop = yCentre - width / 2;
-                yBottom = yCentre + width / 2;
+                yTop = yCentre - height / 2;
+                yBottom = yCentre + height / 2;
 
                 // System.out.println("X Left: " + xLeft);
                 //System.out.println("X Right: " + xRight);

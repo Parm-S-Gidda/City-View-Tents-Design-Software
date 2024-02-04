@@ -26,6 +26,8 @@ public class GamePanel extends JPanel implements Runnable {
     ClickHandler mouseH = new ClickHandler();
     Thread gameThread;
 
+    GridSnap gridCollisions = new GridSnap(mouseH, this);
+
     Tent20x20 tent1 = new Tent20x20(this, keyH, mouseH);
     Tent10x20 tent2 = new Tent10x20(this, keyH, mouseH);
     Tent10x10 tent3 = new Tent10x10(this, keyH, mouseH);
@@ -64,6 +66,8 @@ public class GamePanel extends JPanel implements Runnable {
 
             repaint(); //paint screen
 
+            gridCollisions.checkForCloseEdges(tent1, tent2);
+
 
             /*
             try {
@@ -91,6 +95,7 @@ public class GamePanel extends JPanel implements Runnable {
     public void update(){
 
             if(whoseTurn == 1){
+
                 tent1.update();
             }
             else if(whoseTurn == 2){
